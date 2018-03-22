@@ -6,6 +6,12 @@ You can use composer to install this polyfill:
 
 `composer require ayesh/is_countable-polyfill`
 
+This will install the polyfill with all the contents, including tests. If
+you would like to install without these files while keeping only the core
+polyfill, you can use:
+
+`composer require ayesh/is_countable-polyfill --prefer-dist`
+
 ## Tests
 PHPUnit is used as the test framework. Some of the tested variables are
 directly taken from the [commit](https://github.com/php/php-src/pull/3026/commits/587fcc504f8ad2b07ac28c3335cd0fe3ac39b503) that added `is_countable` to PHP source.
