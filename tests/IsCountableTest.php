@@ -1,6 +1,6 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase as TestCase;
 
 class Ayesh_IsCountable_IsCountableTest extends TestCase {
   public function testIsCountableDeclared() {
@@ -9,23 +9,26 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
 
   /**
    * @dataProvider getIsCountableData
+   *
+   * @param $variable
+   * @param $expected_return_value
    */
   public function testIsCountableReturnValues($variable, $expected_return_value) {
     $this->assertEquals(is_countable($variable), $expected_return_value);
   }
 
   public function getIsCountableData() {
-    return [
-      [true, false],
-      [new stdClass(), false],
-      [new ArrayIteratorFake(), true],
-      [new CountableFake(), true],
-      [16, false],
-      [null, false],
-      [[1, 2, 3], true],
-      [(array) 1, true],
-      [(object) ['foo', 'bar', 'baz'], false],
-    ];
+    return array(
+      array(true, false),
+      array(new stdClass(), false),
+      array(new ArrayIteratorFake(), true),
+      array(new CountableFake(), true),
+      array(16, false),
+      array(null, false),
+      array(array(1, 2, 3), true),
+      array((array) 1, true),
+      array((object) array('foo', 'bar', 'baz'), false),
+    );
   }
 }
 
