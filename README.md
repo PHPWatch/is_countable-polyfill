@@ -16,6 +16,18 @@ directly taken from the [commit](https://github.com/php/php-src/pull/3026/commit
    ¯\\_(ツ)_/¯
 
 **PHP 5.2 compatibility**
+
 You can even use this simple compat for any PHP version that you'd ever
 run into. For 5.2 or older versions, please just stop using polyfills
 and just upgrade your PHP version.
+
+**I get `Warning: count(): Parameter must be an array or an object that implements Countable in %s on line %d` error**
+
+This is because you called `count()` function on a variable that cannot be
+counted. If you want to check if a given variable is "positive", you should
+be using `empty()` contruct instead of `count()`.
+
+PHP 7.3 comes with an `is_iterable` function that helps to mitigate such
+warnings by checking if the variable is countable first. For those who
+don't have PHP 7.3 yet, this polyfill will add the same functionality in
+user-land code.
