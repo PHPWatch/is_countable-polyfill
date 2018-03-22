@@ -1,0 +1,24 @@
+{
+    "name": "ayesh/is_countable-polyfill",
+    "description": "A trivial but working polyfill for PHP 7.3 is_countable function.",
+    "type": "library",
+    "keywords": ["polyfill", "shim", "compat", "compatibility", "portable", "port", "php73"],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "license": "MIT and GPL-3.0+",
+    "authors": [
+        {
+            "name": "Ayesh Karunatatne",
+            "email": "ayesh@ayesh.me"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/is_countable.php"
+        ]
+    }
+}
