@@ -19,7 +19,7 @@ directly taken from the [commit](https://github.com/php/php-src/pull/3026/commit
 ## FAQ (or questions I think someone would ask)
 **Why use this library when I could simply copy-paste the snippet from the RFC?**
 
-   ¯\\_(ツ)_/¯
+   ¯\\\_(ツ)_/¯
 
 **PHP 5.2 compatibility**
 
