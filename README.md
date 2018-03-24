@@ -33,7 +33,7 @@ This is because you called `count()` function on a variable that cannot be
 counted. If you want to check if a given variable is "positive", you should
 be using `empty()` contruct instead of `count()`.
 
-PHP 7.3 comes with an `is_iterable` function that helps to mitigate such
+PHP 7.3 comes with an `is_countable` function that helps to mitigate such
 warnings by checking if the variable is countable first. For those who
 don't have PHP 7.3 yet, this polyfill will add the same functionality in
 user-land code.
