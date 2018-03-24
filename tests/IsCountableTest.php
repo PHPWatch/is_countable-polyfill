@@ -14,7 +14,7 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
    * @param $expected_return_value
    */
   public function testIsCountableReturnValues($variable, $expected_return_value) {
-    $this->assertEquals(is_countable($variable), $expected_return_value);
+    $this->assertSame($expected_return_value, is_countable($variable));
   }
 
   public function getIsCountableData() {
