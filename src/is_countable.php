@@ -9,6 +9,14 @@ if (!function_exists('is_countable')):
    * @return bool Returns TRUE if var is countable, FALSE otherwise.
    */
   function is_countable($var) {
-    return (is_array($var) || $var instanceof Countable);
+    return (
+          is_array($var)
+      || (
+          is_object($var)
+          && (
+            $var instanceof \Countable
+            || $var instanceof \SimpleXMLElement
+            || $var instanceof \ResourceBundle
+          )));
   }
 endif;
