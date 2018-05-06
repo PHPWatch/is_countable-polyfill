@@ -28,7 +28,8 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
       array(array(1, 2, 3), true),
       array((array) 1, true),
       array((object) array('foo', 'bar', 'baz'), false),
-      array(new \SimpleXMLElement("<xml><tag>1</tag><tag>2</tag></xml>"), true),
+      array(new \SimpleXMLElement('<xml><tag>1</tag><tag>2</tag></xml>'), true),
+      array(new \ResourceBundle('en', null), true),
     );
   }
 }
