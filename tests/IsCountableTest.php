@@ -37,7 +37,7 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
       array((array) 1, true),
       array((object) array('foo', 'bar', 'baz'), false),
       array(new \SimpleXMLElement('<xml><tag>1</tag><tag>2</tag></xml>'), true),
-      array(\ResourceBundle::create('en', __DIR__ . '/fixtures/en.res'), true),
+      array(\ResourceBundle::create('en', __DIR__ . '/fixtures'), true),
     );
   }
 }
