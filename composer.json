@@ -1,6 +1,6 @@
 {
     "name": "ayesh/is_countable-polyfill",
-    "description": "A trivial but working polyfill for PHP 7.3 is_countable function.",
+    "description": "A trivial but working polyfill for PHP 7.3 is_countable function. Supports PHP versions >= 5.3",
     "type": "library",
     "keywords": ["polyfill", "shim", "compat", "compatibility", "portable", "port", "php73"],
     "require": {
