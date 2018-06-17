@@ -17,6 +17,13 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
     $this->assertSame($expected_return_value, is_countable($variable));
   }
 
+  /**
+   * @requires PHP 5.5
+   */
+  public function testIsCountableGenerator() {
+    $this->assertFalse(is_countable(is_countable_generator()));
+  }
+
   public function getIsCountableData() {
     return array(
       array(true, false),
@@ -29,7 +36,7 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
       array((array) 1, true),
       array((object) array('foo', 'bar', 'baz'), false),
       array(new \SimpleXMLElement('<xml><tag>1</tag><tag>2</tag></xml>'), true),
-      array(new \ResourceBundle('en', null), true),
+      array(new \ResourceBundle('en', __DIR__ . '/fixtures/en.res'), true),
     );
   }
 }
@@ -42,5 +49,11 @@ class ArrayIteratorFake extends ArrayIterator {
 class CountableFake implements Countable {
   public function count() {
     return 16;
+  }
+}
+
+function is_countable_generator() {
+  for ($i = 0; $i < 10; $i++) {
+    yield $i;
   }
 }
