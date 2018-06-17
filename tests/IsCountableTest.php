@@ -21,6 +21,7 @@ class Ayesh_IsCountable_IsCountableTest extends TestCase {
    * @requires PHP 5.5
    */
   public function testIsCountableGenerator() {
+    require_once __DIR__ . '/generator_stub.php';
     $this->assertFalse(is_countable(is_countable_generator()));
   }
 
@@ -52,8 +53,3 @@ class CountableFake implements Countable {
   }
 }
 
-function is_countable_generator() {
-  for ($i = 0; $i < 10; $i++) {
-    yield $i;
-  }
-}
