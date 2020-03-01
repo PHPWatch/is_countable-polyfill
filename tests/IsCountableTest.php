@@ -1,6 +1,6 @@
 <?php
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 class Ayesh_IsCountable_IsCountableTest extends TestCase {
   public function testIsCountableDeclared() {
