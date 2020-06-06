@@ -1,16 +1,10 @@
 # PHP 7.3 is_countable polyfill
-A trivial but working polyfill for PHP 7.3 is_countable function.
+A trivial yet functional polyfill for PHP 7.3 `is_countable()` function.
 
 ## Installation
 You can use composer to install this polyfill:
 
 `composer require ayesh/is_countable-polyfill`
-
-This will install the polyfill with all the contents, including tests. If
-you would like to install without these files while keeping only the core
-polyfill, you can use:
-
-`composer require ayesh/is_countable-polyfill --prefer-dist`
 
 ## Tests
 PHPUnit is used as the test framework. Some of the tested variables are
@@ -37,3 +31,11 @@ PHP 7.3 comes with an `is_countable` function that helps to mitigate such
 warnings by checking if the variable is countable first. For those who
 don't have PHP 7.3 yet, this polyfill will add the same functionality in
 user-land code.
+
+**Can I remove this package when I upgrade to PHP 7.3 or later?**
+
+Yes. If you require PHP 7.3 or later as the minimum supported PHP version, you do not need to use this package. 
+To remove it:
+
+`composer remove ayesh/is_countable-polyfill`
+
