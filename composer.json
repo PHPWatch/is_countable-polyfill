@@ -20,5 +20,6 @@
         "files": [
             "src/is_countable.php"
         ]
-    }
+    },
+	"abandoned": "symfony/polyfill-php73"
 }

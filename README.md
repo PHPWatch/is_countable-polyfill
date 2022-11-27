@@ -1,6 +1,8 @@
 # PHP 7.3 is_countable polyfill
 A trivial yet functional polyfill for PHP 7.3 `is_countable()` function.
 
+**This polyfill is now archived and is marked as abandoned. PHP 7.3 is quite old, and it is highly recommended to simply upgrade to PHP 8 or later, which should leave no reason to use this polyfill. Thank you for using/considering this polyfill.**
+
 ## Installation
 You can use composer to install this polyfill:
 
